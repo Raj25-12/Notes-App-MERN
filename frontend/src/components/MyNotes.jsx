@@ -15,7 +15,7 @@ const MyNotes = () => {
   const handleGetContent = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/v2/getheading/${accountId}`,
+        `https://notes-app-mern-backend-hyxg.onrender.com/api/v2/getheading/${accountId}`,
       );
       setHeading(response.data);
     } catch (error) {
@@ -24,7 +24,7 @@ const MyNotes = () => {
   };
 
   const handleGetPaint = async () =>{
-        const response = await axios.get(`http://localhost:5000/api/v3/getpaint/${accountId}`)
+        const response = await axios.get(`https://notes-app-mern-backend-hyxg.onrender.com/api/v3/getpaint/${accountId}`)
         setpaint(response.data)    
   }
 
@@ -34,7 +34,7 @@ const MyNotes = () => {
       if (!confirmDelete) { 
         return; 
       }
-      const response = await axios.delete(`http://localhost:5000/api/v2/deleteNote/${item}`)
+      const response = await axios.delete(`https://notes-app-mern-backend-hyxg.onrender.com/api/v2/deleteNote/${item}`)
       toast.error("Note Deleted")
       setHeading((prev)=>
         prev.filter((note) => note._id !== item )
@@ -42,7 +42,7 @@ const MyNotes = () => {
   }
 
   const handleDelete2 = async (item2)=>{
-    const response = await axios.delete(`http://localhost:5000/api/v3/deletepaint/${item2}`)
+    const response = await axios.delete(`https://notes-app-mern-backend-hyxg.onrender.com/api/v3/deletepaint/${item2}`)
     toast.error("Note Deleted")
     setpaint((prev)=>
        prev.filter((note)=> note._id !== item2)

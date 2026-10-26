@@ -12,7 +12,7 @@ const EditNotes = () => {
   const { id } = useParams();
 
   const getpreviousData=async()=>{
-     const response = await axios.get(`http://localhost:5000/api/v2/getContent/${id}`)
+     const response = await axios.get(`https://notes-app-mern-backend-hyxg.onrender.com/api/v2/getContent/${id}`)
      console.log(response.data)
      setHeading(response.data.heading)
      setNote(response.data.note)
@@ -22,7 +22,7 @@ const EditNotes = () => {
   const handleSubmit =async (e) => {
     e.preventDefault();
     try{
-      const response=await axios.put(`http://localhost:5000/api/v2/updatenote/${id}`,{
+      const response=await axios.put(`https://notes-app-mern-backend-hyxg.onrender.com/api/v2/updatenote/${id}`,{
       heading,
       note
     })

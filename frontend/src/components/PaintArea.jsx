@@ -34,7 +34,7 @@ const PaintArea = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/api/v3/createpaint",
+        "https://notes-app-mern-backend-hyxg.onrender.com/api/v3/createpaint",
         obj
       );
 

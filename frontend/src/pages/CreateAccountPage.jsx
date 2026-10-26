@@ -26,7 +26,7 @@ const CreateAccountPage = () => {
      obj.password=password
 
      try{
-     const response = await axios.post("http://localhost:5000/api/v1/create",obj)
+     const response = await axios.post("https://notes-app-mern-backend-hyxg.onrender.com/api/v1/create",obj)
      toast.success(response.data.message)
       localStorage.setItem("accountId",response.data.data._id)
      navigate('/home')

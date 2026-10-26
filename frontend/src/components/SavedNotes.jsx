@@ -10,7 +10,7 @@ const SavedNotes = () => {
     
   
     const getData=async()=>{
-       const response=await axios.get(`http://localhost:5000/api/v2/getcontent/${id}`)
+       const response=await axios.get(`https://notes-app-mern-backend-hyxg.onrender.com/api/v2/getcontent/${id}`)
        setData(response.data)
     }
     

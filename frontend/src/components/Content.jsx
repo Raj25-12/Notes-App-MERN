@@ -16,7 +16,7 @@ const Content = () => {
           obj.accountId=accountId
 
        try{
-           const response=await axios.post("http://localhost:5000/api/v2/create",obj)
+           const response=await axios.post("https://notes-app-mern-backend-hyxg.onrender.com/api/v2/create",obj)
           toast.success(response.data.message) 
        }
        catch(error){

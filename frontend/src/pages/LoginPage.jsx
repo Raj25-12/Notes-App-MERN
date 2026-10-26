@@ -31,7 +31,7 @@ export default function LoginPage() {
      obj.email=email
      obj.password=password
     try{
-     const response=await axios.post("http://localhost:5000/api/v1/login",obj)
+     const response=await axios.post("https://notes-app-mern-backend-hyxg.onrender.com/api/v1/login",obj)
        toast.success("Login Successfully")
        console.log(response.data)
        localStorage.setItem("accountId",response.data.data._id)
